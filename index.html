@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贪吃蛇游戏</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <div class="score-container">
+                <div>当前得分: <span id="current-score">0</span></div>
+                <div>最高分: <span id="high-score">0</span></div>
+            </div>
+            <div class="controls">
+                <button id="start-btn">开始游戏</button>
+                <select id="difficulty">
+                    <option value="easy">简单</option>
+                    <option value="medium">中等</option>
+                    <option value="hard">困难</option>
+                </select>
+            </div>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+        <div id="game-over" class="game-over hidden">
+            <h2>游戏结束</h2>
+            <p>最终得分: <span id="final-score">0</span></p>
+            <button id="restart-btn">重新开始</button>
+        </div>
+    </div>
+    
+    <!-- 添加音频元素 -->
+    <audio id="eatSound" src="audio/eat.mp3" preload="auto"></audio>
+    <audio id="gameOverSound" src="audio/gameover.mp3" preload="auto"></audio>
+    
+    <script src="js/snake.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html> 
